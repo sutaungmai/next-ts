@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if(err) {
       res.status(500).json({message: err.message});
     } else {
-    conn.query<RowDataPacket[]>("SELECT * FROM items", (err, result) => {
+    conn.query("SELECT * FROM items", (err, result) => {
       if (!result) {
         res.status(500).json({
           status: "error",
