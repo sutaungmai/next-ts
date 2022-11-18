@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { useGetProductsQuery } from '../features/productsApi'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  // const {data,error,isLoading} = useGetProductsQuery('products')
+  
   return (
     <div className={styles.container}>
       <Head>
